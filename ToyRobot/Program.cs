@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using ZoneProject.Logic;
-using ZoneProject.Logic.Models;
+using ToyRobot.Logic;
+using ToyRobot.Logic.Models;
 
-namespace ZoneProject
+namespace ToyRobot
 {
     public class Program
     {

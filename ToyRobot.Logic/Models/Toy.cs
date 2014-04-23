@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ZoneProject.Logic;
+using ToyRobot.Logic;
 
-namespace ZoneProject.Logic.Models
+namespace ToyRobot.Logic.Models
 {
     /// <summary>
     /// Basic model of Toy Robot

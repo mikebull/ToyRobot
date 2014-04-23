@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ZoneProject.Logic;
-using ZoneProject.Logic.Models;
+using ToyRobot.Logic;
+using ToyRobot.Logic.Models;
 
-namespace ZoneProject.Test
+namespace ToyRobot.Test
 {
     /// <summary>
     /// Test key functionality of table

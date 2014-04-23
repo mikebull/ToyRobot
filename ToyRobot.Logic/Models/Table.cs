@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ZoneProject.Logic.Models
+namespace ToyRobot.Logic.Models
 {
     /// <summary>
     /// Representing the table for the game

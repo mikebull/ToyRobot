@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ZoneProject;
-using ZoneProject.Logic;
-using ZoneProject.Logic.Models;
+using ToyRobot;
+using ToyRobot.Logic;
+using ToyRobot.Logic.Models;
 
-namespace ZoneProject
+namespace ToyRobot
 {
     /// <summary>
     /// Abstracted commands for game

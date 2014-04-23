@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ZoneProject.Logic.Models;
+using ToyRobot.Logic.Models;
 
-namespace ZoneProject.Test
+namespace ToyRobot.Test
 {
     /// <summary>
     /// Test data to show working application

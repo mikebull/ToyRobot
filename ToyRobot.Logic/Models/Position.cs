@@ -1,4 +1,4 @@
-﻿namespace ZoneProject.Logic.Models
+﻿namespace ToyRobot.Logic.Models
 {
     /// <summary>
     /// Basic model for a given position on the table

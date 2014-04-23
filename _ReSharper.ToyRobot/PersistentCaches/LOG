@@ -1,5 +1,5 @@
-2014/04/23-21:05:54.823 5bac Recovering log #3
-2014/04/23-21:05:54.823 5bac Level-0 table #5: started
-2014/04/23-21:05:54.828 5bac Level-0 table #5: 9931 bytes OK
-2014/04/23-21:05:54.839 5bac Delete type=0 #3
-2014/04/23-21:05:54.840 5bac Delete type=3 #2
+2014/04/23-22:58:34.432 544c Recovering log #9
+2014/04/23-22:58:34.432 544c Level-0 table #11: started
+2014/04/23-22:58:34.434 544c Level-0 table #11: 1938 bytes OK
+2014/04/23-22:58:34.450 544c Delete type=0 #9
+2014/04/23-22:58:34.450 544c Delete type=3 #7

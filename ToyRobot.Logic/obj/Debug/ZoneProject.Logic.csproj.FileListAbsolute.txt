@@ -1,5 +1,0 @@
-C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject.Logic\bin\Debug\ZoneProject.Logic.dll
-C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject.Logic\bin\Debug\ZoneProject.Logic.pdb
-C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject.Logic\obj\Debug\ZoneProject.Logic.dll
-C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject.Logic\obj\Debug\ZoneProject.Logic.pdb
-C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject.Logic\obj\Debug\ZoneProject.Logic.csprojResolveAssemblyReference.cache

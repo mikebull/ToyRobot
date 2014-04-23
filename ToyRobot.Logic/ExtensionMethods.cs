@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ZoneProject.Logic
+namespace ToyRobot.Logic
 {
     /// <summary>
     /// A set of extension methods to help understand commands 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ZoneProject.Logic
+namespace ToyRobot.Logic
 {
     public enum ToyAction
     {

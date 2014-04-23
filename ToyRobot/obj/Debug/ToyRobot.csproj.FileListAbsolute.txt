@@ -1,8 +1,8 @@
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ZoneProject.exe.config
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\obj\Debug\ZoneProject.exe
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\obj\Debug\ZoneProject.pdb
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ZoneProject.exe
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ZoneProject.pdb
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ZoneProject.Logic.dll
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ZoneProject.Logic.pdb
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ToyRobot.exe.config
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ToyRobot.exe
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ToyRobot.pdb
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ToyRobot.Logic.dll
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\bin\Debug\ToyRobot.Logic.pdb
 C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\obj\Debug\ToyRobot.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\obj\Debug\ToyRobot.exe
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot\obj\Debug\ToyRobot.pdb
