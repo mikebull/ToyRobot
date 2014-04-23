@@ -1,0 +1,8 @@
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\bin\Debug\ZoneProject.exe.config
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\bin\Debug\ZoneProject.exe
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\bin\Debug\ZoneProject.pdb
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\obj\Debug\ZoneProject.exe
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\obj\Debug\ZoneProject.pdb
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\obj\Debug\ZoneProject.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\bin\Debug\ZoneProject.Logic.dll
+C:\Users\Mike\Desktop\Play\ZoneProject\ZoneProject\bin\Debug\ZoneProject.Logic.pdb

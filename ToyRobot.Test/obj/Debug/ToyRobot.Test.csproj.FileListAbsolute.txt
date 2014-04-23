@@ -1,0 +1,9 @@
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.Test.dll
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.Test.pdb
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.exe
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.Logic.dll
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.Logic.pdb
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\bin\Debug\ZoneProject.pdb
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\obj\Debug\ToyRobot.Test.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\obj\Debug\ZoneProject.Test.dll
+C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Test\obj\Debug\ZoneProject.Test.pdb

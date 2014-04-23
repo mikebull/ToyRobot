@@ -1,0 +1,5 @@
+<Modules>
+  <Module PersistentId="D10107A8-EE0C-4479-A294-4E39D122248B" ModuleId="ToyRobot.Test" />
+  <Module PersistentId="EA804819-4725-486D-AC9A-3983B6A4C37A" ModuleId="ToyRobot" />
+  <Module PersistentId="5A619CDD-E1C3-47B9-9460-40201752CFC5" ModuleId="ToyRobot.Logic" />
+</Modules>
