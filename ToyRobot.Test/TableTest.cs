@@ -5,6 +5,9 @@ using ZoneProject.Logic.Models;
 
 namespace ZoneProject.Test
 {
+    /// <summary>
+    /// Test key functionality of table
+    /// </summary>
     [TestClass]
     public class TableTest
     {
@@ -40,8 +43,11 @@ namespace ZoneProject.Test
             ParseCommands.Move("Move");
         }
 
+        /// <summary>
+        /// Check to see if robot can move off of table
+        /// </summary>
         [TestMethod]
-        public void ShouldNotMoveIfTooFar()
+        public void ShouldNotMoveIfOffTable()
         {
             ParseCommands.Place("Place 0,0,South");
             ParseCommands.Move("Move");
@@ -54,6 +60,9 @@ namespace ZoneProject.Test
             Assert.AreEqual(y, 0);
         }
 
+        /// <summary>
+        /// Check that toy rotate correctly
+        /// </summary>
         [TestMethod]
         public void ToyRotate()
         {

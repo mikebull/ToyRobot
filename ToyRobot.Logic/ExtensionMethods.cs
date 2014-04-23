@@ -1,26 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZoneProject.Logic
 {
-    public enum ToyAction
-    {
-        Move,
-        Left,
-        Right
-    }
-
-    public enum ToyDirection
-    {
-        North,
-        South,
-        East,
-        West
-    }
-
+    /// <summary>
+    /// A set of extension methods to help understand commands 
+    /// given from standard input
+    /// </summary>
     public static class ExtensionMethods
     {
         /// <summary>
@@ -71,10 +57,10 @@ namespace ZoneProject.Logic
             {
                 var dictionary = new Dictionary<string, ToyDirection>(StringComparer.InvariantCultureIgnoreCase)
                                      {
-                                         {Constants.North, ToyDirection.North},
-                                         {Constants.South, ToyDirection.South},
-                                         {Constants.East, ToyDirection.East},
-                                         {Constants.West, ToyDirection.West}
+                                         {Constants.CardinalPoints.North, ToyDirection.North},
+                                         {Constants.CardinalPoints.South, ToyDirection.South},
+                                         {Constants.CardinalPoints.East, ToyDirection.East},
+                                         {Constants.CardinalPoints.West, ToyDirection.West}
                                      };
 
                 var lookup = dictionary[direction];

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ZoneProject.Logic;
-
-namespace ZoneProject.Logic.Models
+﻿namespace ZoneProject.Logic.Models
 {
+    /// <summary>
+    /// Basic model for a given position on the table
+    /// </summary>
     public class Position
     {
         public int X { get; set; }

@@ -10,6 +10,9 @@ using ZoneProject.Logic.Models;
 
 namespace ZoneProject
 {
+    /// <summary>
+    /// Abstracted commands for game
+    /// </summary>
     public static class ParseCommands
     {
         /// <summary>
@@ -19,8 +22,8 @@ namespace ZoneProject
         public static void Place(string input)
         {
             // Strip whitespace and remove command
-            input = input.Replace(Constants.Place, String.Empty, StringComparison.InvariantCultureIgnoreCase);
-            input = Regex.Replace(input, @"\s+", "");
+            input = input.Replace(Constants.Commands.Place, String.Empty, StringComparison.InvariantCultureIgnoreCase);
+            input = Regex.Replace(input, @"\s+", String.Empty);
 
             string[] values = input
                 .Split(',')
@@ -50,18 +53,26 @@ namespace ZoneProject
             Table.PlaceToy(x, y, direction);
         }
 
+        /// <summary>
+        /// Parse move command
+        /// </summary>
+        /// <param name="input"></param>
         public static void Move(string input)
         {
             Table.MoveToy(ToyAction.Move);
         }
 
+        /// <summary>
+        /// Parse direction command
+        /// </summary>
+        /// <param name="input"></param>
         public static void Direction(string input)
         {
-            if (input.Contains(Constants.Left, StringComparison.InvariantCultureIgnoreCase))
+            if (input.Contains(Constants.Commands.Left, StringComparison.InvariantCultureIgnoreCase))
             {
                 Table.ChangeToysDirection(ToyAction.Left);
             }
-            else if (input.Contains(Constants.Right, StringComparison.InvariantCultureIgnoreCase))
+            else if (input.Contains(Constants.Commands.Right, StringComparison.InvariantCultureIgnoreCase))
             {
                 Table.ChangeToysDirection(ToyAction.Right);
             }

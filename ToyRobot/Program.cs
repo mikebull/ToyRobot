@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ZoneProject.Logic;
 using ZoneProject.Logic.Models;
 
@@ -27,14 +24,14 @@ namespace ZoneProject
             var input = new List<string>();
 
             string line = Console.ReadLine();
-            while (!String.Equals(line, Constants.Report, StringComparison.InvariantCultureIgnoreCase))
+            while (!String.Equals(line, Constants.Commands.Report, StringComparison.InvariantCultureIgnoreCase))
             {
                 input.Add(line);
                 line = Console.ReadLine();
             }
 
             return input;
-        } 
+        }
 
         /// <summary>
         /// Parse string commands and build set of delegates
@@ -47,19 +44,19 @@ namespace ZoneProject
 
             foreach (string command in commands)
             {
-                if (command.Contains(Constants.Place, StringComparison.InvariantCultureIgnoreCase))
+                if (command.Contains(Constants.Commands.Place, StringComparison.InvariantCultureIgnoreCase))
                 {
                     // Place command
                     instructions.Add(new Tuple<string, Command>(command, ParseCommands.Place));
                 }
 
-                if (command.Contains(Constants.Move, StringComparison.InvariantCultureIgnoreCase))
+                if (command.Contains(Constants.Commands.Move, StringComparison.InvariantCultureIgnoreCase))
                 {
                     // Move command
                     instructions.Add(new Tuple<string, Command>(command, ParseCommands.Move));
                 }
 
-                if (command.Contains(Constants.Left, StringComparison.InvariantCultureIgnoreCase) || command.Contains(Constants.Right, StringComparison.InvariantCultureIgnoreCase))
+                if (command.Contains(Constants.Commands.Left, StringComparison.InvariantCultureIgnoreCase) || command.Contains(Constants.Commands.Right, StringComparison.InvariantCultureIgnoreCase))
                 {
                     // ToyDirection command
                     instructions.Add(new Tuple<string, Command>(command, ParseCommands.Direction));
@@ -67,10 +64,10 @@ namespace ZoneProject
             }
 
             return instructions;
-        } 
+        }
 
         /// <summary>
-        /// 
+        /// Main method for application
         /// </summary>
         private static void Main()
         {
@@ -85,10 +82,11 @@ namespace ZoneProject
                 var input = GetCommands();
                 var instructions = ParseCommandsToInstructions(input);
 
-                foreach (var pair in instructions)
+                // Feed instructions into delegate
+                foreach (var instruction in instructions)
                 {
-                    Command instruction = pair.Item2;
-                    instruction(pair.Item1);
+                    Command applicationCommand = instruction.Item2;
+                    applicationCommand(instruction.Item1);
                 }
 
                 // Print result
@@ -100,7 +98,7 @@ namespace ZoneProject
                 Console.WriteLine();
 
                 ConsoleKey key = Console.ReadKey(true).Key;
-                if(key == ConsoleKey.Escape)
+                if (key == ConsoleKey.Escape)
                 {
                     retry = false;
                 }

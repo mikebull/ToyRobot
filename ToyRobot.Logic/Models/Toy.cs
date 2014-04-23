@@ -7,7 +7,9 @@ using ZoneProject.Logic;
 
 namespace ZoneProject.Logic.Models
 {
-
+    /// <summary>
+    /// Basic model of Toy Robot
+    /// </summary>
     public class Toy
     {
         public int? X { get; set; }

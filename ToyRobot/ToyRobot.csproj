@@ -49,9 +49,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="README.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\ToyRobot.Logic\ToyRobot.Logic.csproj">
       <Project>{5A619CDD-E1C3-47B9-9460-40201752CFC5}</Project>
       <Name>ToyRobot.Logic</Name>

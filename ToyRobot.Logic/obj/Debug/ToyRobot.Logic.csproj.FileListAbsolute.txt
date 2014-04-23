@@ -1,5 +1,4 @@
 C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Logic\bin\Debug\ZoneProject.Logic.dll
 C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Logic\bin\Debug\ZoneProject.Logic.pdb
-C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Logic\obj\Debug\ToyRobot.Logic.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Logic\obj\Debug\ZoneProject.Logic.dll
 C:\Users\Mike\Desktop\Play\ToyRobot\ToyRobot.Logic\obj\Debug\ZoneProject.Logic.pdb

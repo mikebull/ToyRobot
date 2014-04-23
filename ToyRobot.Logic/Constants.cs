@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 
 namespace ZoneProject.Logic
 {
+    /// <summary>
+    /// Commonly used string constants used 
+    /// in application
+    /// </summary>
     public class Constants
     {
-        public const string Place = "PLACE";
-        public const string Move = "MOVE";
-        public const string Left = "LEFT";
-        public const string Right = "RIGHT";
-        public const string Report = "REPORT";
+        /// <summary>
+        /// Constants for game commands
+        /// </summary>
+        public class Commands
+        {
+            public const string Place = "PLACE";
+            public const string Move = "MOVE";
+            public const string Left = "LEFT";
+            public const string Right = "RIGHT";
+            public const string Report = "REPORT";
+        }
 
-        public const string North = "North";
-        public const string South = "South";
-        public const string East = "East";
-        public const string West = "West";
-    }
-
-    public enum Commands
-    {
-        Place,
-        Move,
-        Left,
-        Right,
-        Report
-    }
-
-    public enum Status
-    {
-        Toy,
-        Open
+        /// <summary>
+        /// Constants to represent cardinal points
+        /// </summary>
+        public class CardinalPoints
+        {
+            public const string North = "North";
+            public const string South = "South";
+            public const string East = "East";
+            public const string West = "West";
+        }
     }
 }

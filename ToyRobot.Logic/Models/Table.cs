@@ -1,40 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ZoneProject.Logic.Models
 {
-
+    /// <summary>
+    /// Representing the table for the game
+    /// </summary>
     public static class Table
     {
         private const int Rows = 5;
         private const int Columns = 5;
 
-        private static List<Position> Data { get; set; }
+        private static List<Position> Positions { get; set; }
         private static Toy Robot { get; set; }
 
+        /// <summary>
+        /// Instantiate Table data and Toy Robot
+        /// </summary>
         static Table()
         {
-            Data = new List<Position>();
+            Positions = new List<Position>();
 
             for (int x = 0; x < Rows; x++)
             {
                 for (int y = 0; y < Columns; y++)
                 {
-                    Data.Add(new Position { X = x, Y = y, Status = Status.Open });
+                    Positions.Add(new Position { X = x, Y = y, Status = Status.Open });
                 }
             }
 
+            // Set coordinates to null as Toy not yet placed
             Robot = new Toy { X = null, Y = null };
         }
 
+        /// <summary>
+        /// Return status of robot
+        /// </summary>
+        /// <returns></returns>
         public static string Report()
         {
             return Robot.ReportStatus();
         }
 
+        /// <summary>
+        /// Check given action, and switch cardinal direction
+        /// </summary>
+        /// <param name="toyAction"></param>
         public static void ChangeToysDirection(ToyAction toyAction)
         {
             if (toyAction.Equals(ToyAction.Left))
@@ -76,46 +88,60 @@ namespace ZoneProject.Logic.Models
             }
         }
 
-        public static bool TileExists(int x, int y)
+        /// <summary>
+        /// Check to see if a position on the table exists exists
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public static bool PositionExists(int x, int y)
         {
-            List<Position> tiles = Data
-                .Where(tile => tile.X == x && tile.Y == y)
-                .ToList();
-
-            return tiles.Count != 0;
+            var position = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y);
+            return position != null;
         }
 
+        /// <summary>
+        /// Place Toy on board with given direction
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="toyDirection"></param>
         public static void PlaceToy(int x, int y, ToyDirection toyDirection)
         {
             // Find where toy is
-            int[] coordinatesOfToy = FindCoordinatesOfToy(Data);
+            int[] coordinatesOfToy = FindCoordinatesOfToy(Positions);
 
             if (coordinatesOfToy != null)
             {
                 var currentX = coordinatesOfToy[0];
                 var currentY = coordinatesOfToy[1];
 
-                foreach (Position tile in Data.Where(tile => tile.X == currentX && tile.Y == currentY))
+                foreach (Position tile in Positions.Where(tile => tile.X == currentX && tile.Y == currentY))
                 {
                     tile.Status = Status.Open;
                 }
             }
 
-            if (!TileExists(x, y))
+            if (!PositionExists(x, y))
             {
                 throw new ArgumentException("Tile does not exist");
-            };
+            }
 
-            foreach (Position tile in Data.Where(tile => tile.X == x && tile.Y == y))
+            foreach (Position tile in Positions.Where(tile => tile.X == x && tile.Y == y))
             {
                 tile.Status = Status.Toy;
             }
 
+            // Set coordinates and direction for toy
             Robot.X = x;
             Robot.Y = y;
             Robot.ToyDirection = toyDirection;
         }
 
+        /// <summary>
+        /// Move Toy across table
+        /// </summary>
+        /// <param name="toyAction"></param>
         public static void MoveToy(ToyAction toyAction)
         {
             int?[] position = GetToyCoordinates();
@@ -138,55 +164,55 @@ namespace ZoneProject.Logic.Models
                 switch (direction)
                 {
                     case ToyDirection.East:
-                        nextPosition = Data.FirstOrDefault(tile => tile.X == x + 1 && tile.Y == y);
-                        currentPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y);
+                        nextPosition = Positions.FirstOrDefault(tile => tile.X == x + 1 && tile.Y == y);
+                        currentPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y);
 
                         if (nextPosition != null)
                         {
-                            int currentTileLocation = Data.IndexOf(currentPosition);
-                            int nextTileLocation = Data.IndexOf(nextPosition);
+                            int currentTileLocation = Positions.IndexOf(currentPosition);
+                            int nextTileLocation = Positions.IndexOf(nextPosition);
 
-                            Data[nextTileLocation].Status = Status.Toy;
-                            Data[currentTileLocation].Status = Status.Open;
+                            Positions[nextTileLocation].Status = Status.Toy;
+                            Positions[currentTileLocation].Status = Status.Open;
                         }
                         break;
                     case ToyDirection.North:
-                        nextPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y + 1);
-                        currentPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y);
+                        nextPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y + 1);
+                        currentPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y);
 
                         if (nextPosition != null)
                         {
-                            int currentTileLocation = Data.IndexOf(currentPosition);
-                            int nextTileLocation = Data.IndexOf(nextPosition);
+                            int currentTileLocation = Positions.IndexOf(currentPosition);
+                            int nextTileLocation = Positions.IndexOf(nextPosition);
 
-                            Data[nextTileLocation].Status = Status.Toy;
-                            Data[currentTileLocation].Status = Status.Open;
+                            Positions[nextTileLocation].Status = Status.Toy;
+                            Positions[currentTileLocation].Status = Status.Open;
                         }
                         break;
                     case ToyDirection.West:
-                        nextPosition = Data.FirstOrDefault(tile => tile.X == x - 1 && tile.Y == y);
-                        currentPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y);
+                        nextPosition = Positions.FirstOrDefault(tile => tile.X == x - 1 && tile.Y == y);
+                        currentPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y);
 
                         if (nextPosition != null)
                         {
-                            int currentTileLocation = Data.IndexOf(currentPosition);
-                            int nextTileLocation = Data.IndexOf(nextPosition);
+                            int currentTileLocation = Positions.IndexOf(currentPosition);
+                            int nextTileLocation = Positions.IndexOf(nextPosition);
 
-                            Data[nextTileLocation].Status = Status.Toy;
-                            Data[currentTileLocation].Status = Status.Open;
+                            Positions[nextTileLocation].Status = Status.Toy;
+                            Positions[currentTileLocation].Status = Status.Open;
                         }
                         break;
                     case ToyDirection.South:
-                        nextPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y - 1);
-                        currentPosition = Data.FirstOrDefault(tile => tile.X == x && tile.Y == y);
+                        nextPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y - 1);
+                        currentPosition = Positions.FirstOrDefault(tile => tile.X == x && tile.Y == y);
 
                         if (nextPosition != null)
                         {
-                            int currentTileLocation = Data.IndexOf(currentPosition);
-                            int nextTileLocation = Data.IndexOf(nextPosition);
+                            int currentTileLocation = Positions.IndexOf(currentPosition);
+                            int nextTileLocation = Positions.IndexOf(nextPosition);
 
-                            Data[nextTileLocation].Status = Status.Toy;
-                            Data[currentTileLocation].Status = Status.Open;
+                            Positions[nextTileLocation].Status = Status.Toy;
+                            Positions[currentTileLocation].Status = Status.Open;
                         }
                         break;
                 }
@@ -196,29 +222,45 @@ namespace ZoneProject.Logic.Models
             FindCoordinatesOfToy();
         }
 
+        /// <summary>
+        /// Obtains coordinate of toy as array
+        /// </summary>
+        /// <returns></returns>
         public static int?[] GetToyCoordinates()
         {
             return new[] { Robot.X, Robot.Y };
         }
 
+        /// <summary>
+        /// Obtains direction of toy
+        /// </summary>
+        /// <returns></returns>
         public static ToyDirection GetToyDirection()
         {
             return Robot.ToyDirection;
         }
 
+        /// <summary>
+        /// Sets coordinates for toy
+        /// </summary>
         public static void FindCoordinatesOfToy()
         {
-            var test = FindCoordinatesOfToy(Data);
+            var coordinates = FindCoordinatesOfToy(Positions);
 
-            Robot.X = test[0];
-            Robot.Y = test[1];
+            Robot.X = coordinates[0];
+            Robot.Y = coordinates[1];
         }
 
+        /// <summary>
+        /// Returns the coordinates of the toy
+        /// </summary>
+        /// <param name="coordinates"></param>
+        /// <returns></returns>
         private static int[] FindCoordinatesOfToy(IEnumerable<Position> coordinates)
         {
-            Position test = coordinates.FirstOrDefault(tile => tile.Status == Status.Toy);
+            Position position = coordinates.FirstOrDefault(tile => tile.Status == Status.Toy);
 
-            return test != null ? new[] { test.X, test.Y } : null;
+            return position != null ? new[] { position.X, position.Y } : null;
         }
     }
 }
